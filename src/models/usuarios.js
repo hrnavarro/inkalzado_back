@@ -1,9 +1,5 @@
 const mongoose=require("mongoose")
 const usuariosModel=mongoose.Schema({
-    id:{
-        type:Number,
-        require:true
-    },
     nombre:{
         type:String,
         require:true
