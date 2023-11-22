@@ -5,7 +5,7 @@ require("dotenv").config()
 
 //Definicion de configuraciones
 const app=express()
-const puerto = 3000;
+const puerto = 7000;
 //rutas
 
 
