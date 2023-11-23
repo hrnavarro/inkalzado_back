@@ -1,11 +1,8 @@
 //llamar paquetes
 const express= require("express")
 const mongoose=require("mongoose");
-const zapatillas = require("./routes/carrito_compra");
-const mongoose=require("mongoose")
-
+const zapatillas = require("./routes/pedidos");
 require("dotenv").config()
-const zapatillas= require("./routes/carrito_compra")
 
 //Definicion de configuraciones
 const app=express()
