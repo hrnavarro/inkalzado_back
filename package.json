@@ -16,6 +16,10 @@
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
     "swagger-jsdoc": "^6.2.8",
+<<<<<<< HEAD
     "swagger-ui-express": "^5.0.0"
+=======
+    "swagger-ui": "^5.10.3"
+>>>>>>> da92a93f2e5400c7b7a6d915d75258c08d102bb1
   }
 }

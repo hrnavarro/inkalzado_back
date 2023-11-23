@@ -1,5 +1,6 @@
 //llamar paquetes
 const express= require("express")
+<<<<<<< HEAD
 const mongoose=require("mongoose")
 require("dotenv").config()
 const zapatillas = require("./routes/carrito_compra")
@@ -7,6 +8,11 @@ const usuarios= require("./routes/usuarios")
 const swaggerJSDoc = require ("swaggerjsdoc")
 const swaggerUI=require("swagger-ui-express")
 const path= require("path")
+=======
+const mongoose=require("mongoose");
+const zapatillas = require("./routes/pedidos");
+require("dotenv").config()
+>>>>>>> da92a93f2e5400c7b7a6d915d75258c08d102bb1
 
 //Definicion de configuraciones
 const app=express();
