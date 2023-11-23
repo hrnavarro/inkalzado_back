@@ -1,4 +1,6 @@
-const mongoose=require("mongoose")
+const mongoose= require("mongoose")
+
+
 const usuariosModel=mongoose.Schema({
     nombre:{
         type:String,
@@ -20,6 +22,6 @@ const usuariosModel=mongoose.Schema({
         type:String,
         require:true
     }
-})
+});
 
-module.exports=mongoose.model("usuarios",usuariosModel)
+module.exports= mongoose.model("usuarios",usuariosModel)
