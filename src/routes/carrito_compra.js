@@ -24,18 +24,18 @@ const router= express.Router();
  * 
  * nombre:
  * typr:string 
- * decripcion : nombre de las zapatillas
+ * decripcion : nombre de las zapatillas,
  * 
 */
 
 //get
-router.get("/pedido",(req,res)=>(zapatillasModel.find()
+router.get("/zapatillas",(req,res)=>(zapatillasModel.find()
     .then((data)=>res.json(data))
     
     ))
    
 //post
-router.post("/pedido",(req,res)=>{
+router.post("/zapatillas",(req,res)=>{
     const zapatilas= zapatillasModel(req,body);
     zapatilas.save()
     .then((data)=>res.json({mensaje:"compra realizada"}))
@@ -44,14 +44,11 @@ router.post("/pedido",(req,res)=>{
 
 //delete
 
-<<<<<<< HEAD:src/routes/carrito_compra.js
 router.delete("/zapatillas",(req,res)=>{
     const zapatilas=(req.params);
-=======
-router.delete("/pedido",(req,res)=>{
-    const zapatilas=(req.param);
->>>>>>> da92a93f2e5400c7b7a6d915d75258c08d102bb1:src/routes/pedidos.js
     zapatilas.remove()
+    .then((data)=>res.json({mensaje:"compra realizada"}))
+    .catch((error)=>res.json({mensaje:"error"}))
 })
 
 module.exports=router

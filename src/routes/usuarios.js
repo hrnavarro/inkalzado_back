@@ -3,11 +3,11 @@ const usuariosModel=require("../models/usuarios");
 const router=express.Router();
 
 //get
-router.get("../usuarios",(req,res)=>(usuariosModel.find()
+router.get("/usuarios",(req,res)=>(usuariosModel.find()
 .then((data)=>(res.json(data)))
 ))
 //post
-router.post("../usuarios",(req,res)=>(usuariosModel(req.body)
+router.post("/usuarios",(req,res)=>(usuariosModel(req.body)
 .save()
 .then((data)=>res.json(data))
 .catch((error)=>res.json({message: error}))
