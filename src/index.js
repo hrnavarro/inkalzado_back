@@ -1,7 +1,8 @@
 //llamar paquetes
 const express= require("express")
 const mongoose=require("mongoose");
-const zapatillas = require("./routes/pedidos");
+const pedidos = require("./routes/pedidos");
+const usuarios = require("./models/usuarios");
 require("dotenv").config()
 
 //Definicion de configuraciones
@@ -12,8 +13,9 @@ app.use(express.json());
 
 
 //rutas
-app.get("/",(req,res)=>{res.send("probando puerto")})
-app.use("/api",zapatillas)
+app.get("/inkalzado",(req,res)=>{res.send("conectado al puerto")})
+app.use("/usuarios",usuarios)
+app.use("/",)
 
 
 //Ejecucion

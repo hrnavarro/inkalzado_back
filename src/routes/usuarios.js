@@ -14,9 +14,9 @@ router.post("../usuarios",(req,res)=>(usuariosModel(req.body)
 ))
 
 //put 
-router.put("../usuarios/:id",(req,res)=>{
-    const {id}=(req.params);
-    const {contraseña,username,correo}=req.body;
+router.put("../usuarios/:username",(req,res)=>{
+    const {username}=(req.params);
+    const {contraseña,correo}=req.body;
     usuariosModel.updateOne({_id:id},{contraseña,username,correo})
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message: error}))
@@ -24,7 +24,7 @@ router.put("../usuarios/:id",(req,res)=>{
 
 //delete
 router.delete("../usuarios",(req,res)=(usuariosModel(req.params)
-.remove({_id:id})
+.remove({username})
 .then((data)=>res.json(data))
 .catch((error)=>res.json({message: error}))
 ))
